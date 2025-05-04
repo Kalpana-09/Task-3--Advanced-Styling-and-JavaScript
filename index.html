@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏠 HomeStyle Furniture</h1>
+      
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Task Manager</a>
+            <a href="#">Registration</a>
+            <a href="#">About us</a>
+        </div>
+    </header>
+
+   <!-- Task 1: Responsive Product Grid -->
+  <section class="container">
+    <div class="card">
+      <img src="modern sofa.jpg" alt="Modern Sofa">
+      <h3>Modern Sofa</h3>
+      <p>Comfortable 3-seater in grey fabric, perfect for living rooms.</p>
+    </div>
+    <div class="card">
+      <img src="table.jpeg" alt="Dining Table">
+      <h3>Dining Table</h3>
+      <p>Classic wooden dining table with seating for six.</p>
+    </div>
+    <div class="card">
+      <img src="chair.webp" alt="Lounge Chair">
+      <h3>Lounge Chair</h3>
+      <p>Stylish single-seater ideal for reading or relaxing.</p>
+    </div>
+    <div class="card">
+      <img src="dining table.jpg" alt="Dining Table">
+      <h3>Dining Table</h3>
+      <p>for eating with family.</p>
+    </div>
+    <div class="card">
+      <img src="premium bed.avif" alt="Lounge Chair">
+      <h3>Premium Bed</h3>
+      <p>To get proper sleep.</p>
+    </div>
+  </section>
+
+  <!-- Task 2: Image Carousel -->
+ <!-- Task 2: Image Carousel -->
+<section class="carousel-section">
+  <h2>🌟 Featured Furniture</h2>
+  <div id="carousel">
+    <div id="carousel-images" class="carousel-images">
+      <img id="carouselImage" src="modern sofa.jpg" alt="Featured Furniture" />
+      <img id="carouselImage" src="table.jpeg" alt="Featured Furniture" />
+      <img id="carouselImage" src="chair.webp" alt="Featured Furniture" />
+    </div>
+    <button id="prevBtn" onclick="prevImage()">⬅️ Prev</button>
+    <button id="nextBtn" onclick="nextImage()">Next ➡️</button>
+  </div>
+</section>
+
+
+  <!-- Task 3: API Data Fetch -->
+  <section class="joke-section">
+    <h2>😄 Need a Laugh While You Browse?</h2>
+    <button onclick="getJoke()">Get a Furniture Joke</button>
+    <p id="joke"></p>
+  </section>
+
+  <!-- Task 4: Interactive Quiz -->
+  <section class="quiz-section">
+    <h2>🧠 Furniture Knowledge Quiz</h2>
+    <p>Test your knowledge about furniture styles and materials!</p>
+    
+    <form id="quizForm">
+      <p>1. Which wood is commonly used for premium furniture?</p>
+      <input type="radio" name="q1" value="Oak"> Oak<br>
+      <input type="radio" name="q1" value="Pine"> Pine<br>
+      <input type="radio" name="q1" value="Plastic"> Plastic<br><br>
+
+      <p>2. What is a futon typically used for?</p>
+      <input type="radio" name="q2" value="Sleeping"> Sleeping<br>
+      <input type="radio" name="q2" value="Cooking"> Cooking<br>
+      <input type="radio" name="q2" value="Storage"> Storage<br><br>
+
+      <p>3. Which style is known for minimalism and clean lines?</p>
+      <input type="radio" name="q3" value="Modern"> Modern<br>
+      <input type="radio" name="q3" value="Rustic"> Rustic<br>
+      <input type="radio" name="q3" value="Baroque"> Baroque<br><br>
+
+      <p>4. What material is most associated with industrial furniture?</p>
+      <input type="radio" name="q4" value="Metal"> Metal<br>
+      <input type="radio" name="q4" value="Glass"> Glass<br>
+      <input type="radio" name="q4" value="Leather"> Leather<br><br>
+
+      <button type="submit">Submit Quiz</button>
+    </form>
+
+    <p id="quizResult" class="quiz-result"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Home Furniture Store. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: lightpink;
+    color: #333;
+}
+
+header {
+    background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer {
+    background: #e0e0e0;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-links a {
+    color: white; /* Make text visible on dark background */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* subtle highlight on hover */
+}
+
+/* Task 1: Responsive Furniture Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Task 2: Carousel Styling */
+.carousel-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.carousel-buttons button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-buttons button:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.carousel-buttons button:hover {
+    background-color: #004d40;
+}
+
+/* Task 3: Joke Section */
+.joke-section {
+    text-align: center;
+    margin: 2rem;
+}
+
+.joke-section button {
+    background: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.joke-section button:hover {
+    background: #004d40;
+}
+
+#joke {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Task 4: Quiz Section */
+.quiz-section {
+    background: #ffffff;
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.quiz-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.quiz-section form {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quiz-section input {
+    margin-bottom: 8px;
+}
+
+.quiz-section button {
+    margin-top: 1rem;
+    background-color: #00695c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-result {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 45%; /* Allow 2 cards per row on medium screens */
+    }
+
+    .carousel-images img {
+        max-width: 400px; /* Adjust carousel image size on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 45%; /* Two cards per row on smaller screens */
+    }
+
+    .carousel-buttons {
+        padding: 0 5px; /* Less padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Stack cards vertically on mobile */
+    }
+
+    .carousel-images img {
+        width: 90%; /* Adjust carousel image size on small screens */
+    }
+
+    .carousel-buttons {
+        padding: 0 10px; /* Adjust carousel button padding */
+    }
+}
